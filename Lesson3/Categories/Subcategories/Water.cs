@@ -12,6 +12,11 @@ namespace Lesson3.Categories.Subcategories
         public new string Name { get; set; }
         public string Description { get; set; }
         public string Size { get; set; }
+
+        public new DateTime Created { get; set; }
+        public new DateTime Expired { get; set; }
+
+
         public Water(string name, string descr, string size)
         {
             Name = name;

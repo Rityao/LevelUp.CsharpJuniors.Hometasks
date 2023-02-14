@@ -9,5 +9,10 @@ namespace Lesson3.Models
     internal class Souvenirs : StoreItem
     {
         public override string Name => "Souvenirs";
+        public override void PrintInfo()
+        {
+            Console.WriteLine($"ItemName: ", Name);
+        }
+
     }
 }
