@@ -9,5 +9,10 @@ namespace Lesson3.Models
     internal class Wear : StoreItem
     {
         public override string Name => "Wear";
+
+        public override void PrintInfo()
+        {
+            Console.WriteLine($"ItemName: ", Name);
+        }
     }
 }
