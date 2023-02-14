@@ -9,5 +9,14 @@ namespace Lesson3.Categories.Subcategories
 {
     internal class Water : Food 
     {
+        public new string Name { get; set; }
+        public string Description { get; set; }
+        public string Size { get; set; }
+        public Water(string name, string descr, string size)
+        {
+            Name = name;
+            Description = descr;
+            Size = size;
+        }
     }
 }

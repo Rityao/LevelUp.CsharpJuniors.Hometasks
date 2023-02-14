@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Lesson3
 {
-    internal class StoreItem
+    public abstract class StoreItem
     {
+        public abstract string Name { get; }
+        public virtual void PrintInfo()
+        {
+            Console.WriteLine($"Item name:", Name);
+        }
     }
 }

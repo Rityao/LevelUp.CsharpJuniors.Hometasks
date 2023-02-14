@@ -8,5 +8,6 @@ namespace Lesson3.Models
 {
     internal class Wear : StoreItem
     {
+        public override string Name => "Wear";
     }
 }

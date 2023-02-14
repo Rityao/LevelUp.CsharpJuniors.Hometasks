@@ -8,5 +8,6 @@ namespace Lesson3.Models
 {
     internal class Souvenirs : StoreItem
     {
+        public override string Name => "Souvenirs";
     }
 }
