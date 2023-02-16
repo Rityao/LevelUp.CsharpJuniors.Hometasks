@@ -26,4 +26,4 @@ namespace Lesson4.Models
         }
     }
 }
-
+// Проверка хождения по веткам
