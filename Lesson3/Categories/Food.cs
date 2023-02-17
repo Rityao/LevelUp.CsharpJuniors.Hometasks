@@ -7,20 +7,9 @@ using System.Threading.Tasks;
 
 namespace Lesson3.Models
 {
-    internal class Food : StoreItem, IHasShelfLife
+    public abstract class Food : StoreItem, IHasShelfLife
     {
-        public override string? Name { get; set; }
-        public override string? Description { get; set; }
-        public override int Nomenclature { get; set; }
-        public override int IdNumber { get; set; }
-        public DateTime ExpirationDate { get; set; }
-
-        public bool HasShelf()
-        {
-            return true;
-        }
-
-        public Food(DateTime expirationDate, string name, string description, int nomenclature, int idNumber)
+        protected Food(DateTime expirationDate, string name, string description, int nomenclature, int idNumber)
         {
             ExpirationDate = expirationDate;
             Name = name;
@@ -28,5 +17,13 @@ namespace Lesson3.Models
             Nomenclature = nomenclature;
             IdNumber = idNumber;
         }
+
+        public override string? Name { get; set; }
+        public override string? Description { get; set; }
+        public override int Nomenclature { get; set; }
+        public override int IdNumber { get; set; }
+        public DateTime ExpirationDate { get; set; }
+
+        public abstract bool HasShelf();
     }
 }

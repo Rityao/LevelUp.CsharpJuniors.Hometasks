@@ -14,5 +14,10 @@ namespace Lesson3.Categories.Subcategories
         {
 
         }
+
+        public override bool HasShelf()
+        {
+           return true;
+        }
     }
 }
