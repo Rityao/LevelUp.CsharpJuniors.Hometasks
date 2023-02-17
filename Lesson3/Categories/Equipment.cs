@@ -9,11 +9,10 @@ namespace Lesson3.Models
 {
     internal class Equipment : StoreItem
     {
-        public override string Name => "Equipment";
+        public override string? Name { get; set; }
+        public override string? Description { get; set; }
+        public override int IdNumber { get; set; }
+        public override int Nomenclature { get; set; }
 
-        public override void PrintInfo()
-        {
-            Console.WriteLine($"ItemName: ", Name);
-        }
     }
 }

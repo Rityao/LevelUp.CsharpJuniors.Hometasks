@@ -7,26 +7,26 @@ using System.Threading.Tasks;
 
 namespace Lesson3.Models
 {
-    internal class Food : StoreItem, IHasShelfLife, ExpirationDate
+    internal class Food : StoreItem, IHasShelfLife
     {
-        public override string Name => "Food";
-
-        public DateTime Created { get; set; }
-        public DateTime Expired { get; set; }
+        public override string? Name { get; set; }
+        public override string? Description { get; set; }
+        public override int Nomenclature { get; set; }
+        public override int IdNumber { get; set; }
+        public DateTime ExpirationDate { get; set; }
 
         public bool HasShelf()
         {
             return true;
         }
-        public override void PrintInfo()
-        {
-            Console.WriteLine($"ItemName: ", Name);
-        }
 
-        public Food(DateTime created, DateTime expired)
+        public Food(DateTime expirationDate, string name, string description, int nomenclature, int idNumber)
         {
-            Created = created;
-            Expired = expired;
+            ExpirationDate = expirationDate;
+            Name = name;
+            Description = description;
+            Nomenclature = nomenclature;
+            IdNumber = idNumber;
         }
     }
 }

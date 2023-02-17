@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Lesson3.Models;
-DateTime dateExpired = new DateTime(2024, 7, 20);
-var food = new Food(DateTime.Today, dateExpired);
-food.PrintInfo();
+DateTime dateExpired = new(2024, 7, 20);
+var _ = new Food(dateExpired, "smth", "descr", 1231, 12312);

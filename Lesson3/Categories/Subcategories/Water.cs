@@ -9,19 +9,10 @@ namespace Lesson3.Categories.Subcategories
 {
     internal class Water : Food 
     {
-        public new string Name { get; set; }
-        public string Description { get; set; }
-        public string Size { get; set; }
-
-        public new DateTime Created { get; set; }
-        public new DateTime Expired { get; set; }
-
-
-        public Water(string name, string descr, string size)
+        public Water(DateTime expirationDate, string name, string description, int nomenclature, int idNumber) :
+            base(expirationDate, name, description, nomenclature, idNumber)
         {
-            Name = name;
-            Description = descr;
-            Size = size;
+
         }
     }
 }
