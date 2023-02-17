@@ -14,6 +14,11 @@ namespace Lesson3.Categories.Subcategories
         {
         }
 
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Название батончика: {Name}");
+        }
+
         public override bool HasShelf()
         {
             return true;
