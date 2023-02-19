@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson3.Categories.Subcategories
 {
-    internal class Water : Food 
+    sealed internal class Water : Food 
     {
         public Water(DateTime expirationDate, string name, string description, int nomenclature, int idNumber) :
             base(expirationDate, name, description, nomenclature, idNumber)

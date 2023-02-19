@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson3.Categories.Subcategories
 {
-    internal class Postcards : Souvenirs
+    sealed internal class Postcards : Souvenirs
     {
     }
 }

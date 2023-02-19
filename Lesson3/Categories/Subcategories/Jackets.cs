@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson3.Categories.Subcategories
 {
-    internal class Jackets : Wear
+    sealed internal class Jackets : Wear
     {
     }
 }
