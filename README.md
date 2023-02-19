@@ -35,8 +35,8 @@ Implement simple in-memory caching with TTL (Time-To-Live, timeout) for cached i
 SimpleGenericCache class from the lesson’s demo solution as base for your own implementation. You can do the 
 following things to start:
 <br>1. copy the class SimpleGenericCache to your own project
-<br>2. create new record CachedValue<T> with public properties T Value, DateTime CreationTime and int Timeout
-<br>3. change the type of _cache field to Dictionary<string, CachedValue<T>>
+<br>2. create new record CachedValue< T > with public properties T Value, DateTime CreationTime and int Timeout
+<br>3. change the type of _cache field to Dictionary<string, CachedValue< T >>
 <br>4. add the parameter ‘timeout’ in the signature of the Store method with the default value 30
 <br>5. in Store method, create the instance of CachedValue record for the value you want to cache. Set the Value
 property (just put the ‘value’ parameter into it), set CreationTime field as DateTime.Now and Timeout from 
