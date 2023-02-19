@@ -1,29 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lesson4.Models
+﻿namespace Lesson4.Models
 {
-    internal class SimpleGenericCache<T> // для каждого типа кеша будет создаваться свой экземпляр
+    internal partial class SimpleGenericCache<T>
     {
-        private readonly Dictionary<string, T?> _cache = new();
+        private readonly Dictionary<string, CachedValue<T>> _cache = new();
 
-        internal void Store(string key, T value)
+        public void Store(string key, T value, int timeout = 30)
         {
-            _cache[key] = value;
+            var cachedValue = new CachedValue<T>
+            { 
+                CreationTime = DateTime.Now,
+                Timeout = timeout,
+                Value = value
+            };
+            _cache[key] = cachedValue;
         }
 
-        internal T? Fetch(string key) // тип, на который мапается T будет создаваться с экземпляром класса
-        { // T с ? - может храниться NULLable значение
+        internal CachedValue<T>? Fetch(string key) 
+        {
             if (_cache.TryGetValue(key, out var value))
             {
-                return value;
+                if (value.CreationTime + TimeSpan.FromSeconds(value.Timeout) >= DateTime.Now)
+                {   
+                    return value;
+                }
+                _cache.Remove(key);
             }
-
             return default;
         }
+    }
+    internal record CachedValue<T>
+    {
+        public T? Value { get; init; }
+        public DateTime CreationTime { get; init; }
+        public int Timeout { get; init; }
     }
 }
 
