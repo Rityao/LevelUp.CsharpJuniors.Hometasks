@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson4.Models
 {
-    internal class SimpleGenericCache<T>
+    internal class SimpleGenericCache<T> // для каждого типа кеша будет создаваться свой экземпляр
     {
         private readonly Dictionary<string, T?> _cache = new();
 
@@ -15,8 +15,8 @@ namespace Lesson4.Models
             _cache[key] = value;
         }
 
-        internal T? Fetch(string key)
-        {
+        internal T? Fetch(string key) // тип, на который мапается T будет создаваться с экземпляром класса
+        { // T с ? - может храниться NULLable значение
             if (_cache.TryGetValue(key, out var value))
             {
                 return value;
@@ -27,7 +27,4 @@ namespace Lesson4.Models
     }
 }
 
-// Проверка хождения по веткам
-// Отправляем в master изменения по lesson4
-//а здесь что-то другое
 
