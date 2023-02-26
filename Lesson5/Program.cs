@@ -7,7 +7,3 @@ using Lesson5;
 
 string s = " \tThis is \n a t\test       stri\tng 123@@ ";
 Console.WriteLine(s.Clear());
-
-
-
-
