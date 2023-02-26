@@ -1,4 +1,4 @@
-﻿namespace LevelUp.CsharpJuniors.Hometasks.Lesson2.Hometasks.Models
+﻿namespace Lesson2.Models
 {
     internal class Store
     {

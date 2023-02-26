@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lesson3.Models
+namespace Lesson3.Categories
 {
     public abstract class Food : StoreItem, IHasShelfLife
     {
