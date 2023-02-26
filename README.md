@@ -48,4 +48,12 @@ property (just put the ‘value’ parameter into it), set CreationTime field as
 seconds number from the CachedValue.Timeout property to CreationDate. If the result is more or equals 
 than DateTime.Now, then CachedValue.Value is actual, return it. If the result is less than DateTime.Now, 
 drop the required key from the dictionary and return default.
-
+### Домашнее задание №5:
+Create extension method Clear for System.String class. Method should remove all non-letter and 
+non-numeric symbols (e.g. “\n”, “\t”, start and end whitespaces etc). Result of this method should 
+be cleared string that contains only letters (a-z, A-Z), numbers (0-9) and whitespaces between the 
+words. 
+<br>Example: input string ” \tThis is \n a test string 123 ” should be converted to ”This is a test string 
+123”:
+<br>var testString = ” \tThis is \n a test string ”;
+<br>var clearedString = testString.Clear();
