@@ -8,4 +8,5 @@ Console.WriteLine(sgc.Fetch("1")); // выводим информацию о з�
 sgc.Store("2", "Cache2?", 0);
 Console.WriteLine(sgc.Fetch("2"));
 
-
+sgc.Store("3", "Cache3?", 40); // таймаут больше дефолтного
+Console.WriteLine(sgc.Fetch("3"));
