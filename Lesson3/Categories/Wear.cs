@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lesson3.Categories
+﻿namespace Lesson3.Categories
 {
-    internal class Wear : StoreItem
+    internal abstract class Wear : StoreItem
     {
         public override string? Name { get; set; }
         public override string? Description { get; set; }
