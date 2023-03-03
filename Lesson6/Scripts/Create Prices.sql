@@ -11,7 +11,7 @@ GO
 CREATE TABLE [dbo].[Prices](
 	[ShopItemId] [uniqueidentifier] NOT NULL,
 	[DateTime] [datetime2](7) NOT NULL,
-	[Price] [decimal](18, 0) NOT NULL
+	[Price] [decimal](18, 2) NOT NULL
 ) ON [PRIMARY]
 GO
 

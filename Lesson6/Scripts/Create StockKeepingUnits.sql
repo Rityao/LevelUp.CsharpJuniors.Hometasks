@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[StockKeepingUnits](
 	[StockId] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](100) NOT NULL,
 	[Description] [nvarchar](300) NULL,
-	[Amount] [int] NOT NULL,
+	[Amount] [float] NOT NULL,
  CONSTRAINT [PK_StockKeepingUnits] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

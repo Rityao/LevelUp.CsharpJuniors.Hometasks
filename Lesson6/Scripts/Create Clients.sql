@@ -11,8 +11,8 @@ GO
 CREATE TABLE [dbo].[Clients](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](100) NOT NULL,
-	[Phone] [nvarchar](100) NULL,
-	[Email] [nvarchar](100) NULL,
+	[Phone] [nvarchar](100) NOT NULL,
+	[Email] [nvarchar](100) NOT NULL,
 	[Delivery_Address] [nvarchar](300) NOT NULL,
  CONSTRAINT [PK_Clients] PRIMARY KEY CLUSTERED 
 (

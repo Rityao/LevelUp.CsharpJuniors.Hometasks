@@ -11,9 +11,9 @@ GO
 CREATE TABLE [dbo].[OrderDetails](
 	[OrderId] [uniqueidentifier] NOT NULL,
 	[ShopItemId] [uniqueidentifier] NOT NULL,
-	[Price] [decimal](18, 0) NOT NULL,
+	[Price] [decimal](18, 2) NOT NULL,
 	[Amount] [float] NOT NULL,
-	[Sum] [decimal](18, 0) NOT NULL
+	[Sum] [decimal](18, 2) NOT NULL
 ) ON [PRIMARY]
 GO
 

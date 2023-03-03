@@ -12,8 +12,8 @@ CREATE TABLE [dbo].[ShopItems](
 	[Id] [uniqueidentifier] NOT NULL,
 	[SkuId] [uniqueidentifier] NOT NULL,
 	[CategoryId] [uniqueidentifier] NOT NULL,
-	[Name] [nvarchar](100) NOT NULL,
-	[Description] [nvarchar](300) NULL,
+	[Name] [nvarchar](300) NOT NULL,
+	[Description] [nvarchar](500) NULL,
  CONSTRAINT [PK_ShopItems] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
