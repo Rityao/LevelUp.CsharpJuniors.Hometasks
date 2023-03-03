@@ -1,6 +1,6 @@
 ﻿namespace Lesson4.Models
 {
-    internal partial class SimpleGenericCache<T>
+    internal class SimpleGenericCache<T>
     {
         private readonly Dictionary<string, CachedValue<T>> _cache = new();
 
