@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
 using Lesson5;
 
 // Console.WriteLine("Hello! Please, write smth");
@@ -7,7 +6,3 @@ using Lesson5;
 
 string s = " \tThis is \n a t\test       stri\tng 123@@ ";
 Console.WriteLine(s.Clear());
-
-
-
-
