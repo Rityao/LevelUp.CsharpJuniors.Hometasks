@@ -10,6 +10,7 @@ internal class Program
         try 
         {
             DirectoryInfo di = new(path);
+            int i = 0;
             foreach (var fi in di.GetFiles())
             {   
                 string fiName = Path.Combine(path,fi.Name); 
@@ -18,9 +19,13 @@ internal class Program
                 byte[] newline = Encoding.ASCII.GetBytes(Environment.NewLine);
                 byte[] buffer = new byte[fstreamR.Length]; // выделяем массив для считывания данных из файла
                 await fstreamR.ReadAsync(buffer); // считываем данные
+                if (i != 0)
+                {
+                    await fstream.WriteAsync(newline); // нужно разделить данные от файлов
+                }
                 await fstream.WriteAsync(buffer); // запись массива байтов в файл
-                await fstream.WriteAsync(newline); // нужно разделить данные от файлов
                 Console.WriteLine($"Текст из файла {fiName} записан");
+                i++;
             }
             
             using (FileStream fstream = File.OpenRead(fullPath)) // чтение из файла
