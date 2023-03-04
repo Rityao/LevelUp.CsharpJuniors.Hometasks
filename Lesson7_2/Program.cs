@@ -1,5 +1,8 @@
-﻿using System.Text;
-internal class Program : System.IO.IOException
+﻿using System.IO;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
+
+internal class Program
 {
     private static async Task Main(string[] args) 
     {
@@ -13,9 +16,13 @@ internal class Program : System.IO.IOException
             foreach (var fi in di.GetFiles())
             {
                 using FileStream fstream = new(fullPath, FileMode.Append);  // запись в файл. если файл существует, то текст добавляется в конец файл. Если файла нет, то он создается
-                string? text = File.ReadAllText(path + "\\" + fi.Name);       // предыдущий вариант: string StreamReader sr = File.OpenText(path + "\\" + fi.Name); и sr.ReadLine() читает одну строку
-                byte[] buffer = Encoding.Default.GetBytes(text + "\n"); // преобразуем строку в байты. без \n подчеркивает
+                await string? text = File.ReadAllText(path + "\\" + fi.Name);
+                //using FileStream fstreamR = new(path + "\\" + fi.Name, FileMode.Open);
+                //byte[] buffer = new byte[fstreamR.Length]; // выделяем массив для считывания данных из файла
+                //await fstreamR.ReadAsync(buffer); // считываем данные
+                byte[] buffer = Encoding.Default.GetBytes(text + "\n");
                 await fstream.WriteAsync(buffer);                       // запись массива байтов в файл
+                 
                 Console.WriteLine($"Текст из файла {path + "\\" + fi.Name} записан");
             }
             
