@@ -2,9 +2,9 @@
 {
     public abstract class StoreItem
     {
-        public abstract string? Name { get; set; }
-        public abstract string? Description { get; set; }
-        public abstract int Nomenclature { get; set; }
-        public abstract int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public int Nomenclature { get; set; }
+        public int IdNumber { get; set; }
     }
 }

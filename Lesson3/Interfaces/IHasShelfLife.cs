@@ -2,7 +2,8 @@
 {
     internal interface IHasShelfLife
     {
-        public DateTime ExpirationDate { get; set; }  
+        bool HasShelf();
+        public DateTime ExpirationDate { get; set; }
         bool Expired(DateTime expirationDate);
     }
 }
