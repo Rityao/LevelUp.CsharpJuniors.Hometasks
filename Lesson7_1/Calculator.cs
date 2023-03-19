@@ -7,7 +7,7 @@ namespace Lesson7_1
     {
         public Calculator(List<int> numbers)
         {
-            int Square(int n) => n * n;
+            
             var array = numbers.Cast<int>().ToArray();
             var squares = from n in array.AsParallel().AsOrdered()
                           where n > 0
@@ -16,5 +16,7 @@ namespace Lesson7_1
             foreach (var f in squares)
                 Console.WriteLine("number " + Math.Sqrt(f) + ", square root = " + f);
         }
+
+        private static int Square(int n) => n * n;
     }
 }
