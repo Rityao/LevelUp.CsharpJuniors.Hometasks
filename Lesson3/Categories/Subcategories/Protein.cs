@@ -6,7 +6,7 @@
             base(expirationDate, name, description, nomenclature, id)
         {
             // Name = "БАТОНЧИК!";
-            Id = 123; // перезапишет IdNumber из Program.cs
+         //   Id = 123; перезапишет IdNumber из Program.cs
         }
         public void PrintInfo()
         {
