@@ -57,3 +57,22 @@ words.
 123”:
 <br>var testString = ” \tThis is \n a test string ”;
 <br>var clearedString = testString.Clear();
+### Домашнее задание №6:
+Write the script to create database for web shop. Create the tables below:
+- dbo.Stocks (stocks information – Id, Name, Address)
+- dbo.StockKeepingUnits (stock items in your warehouses – Id, StockId, Name, Description, Amount)
+- dbo.Shipments (shipment info with date/time, stock and skus – Id, StockId, SkuId, Amount)
+- dbo.ShopItemCategories (goods categorization – Id, Name, Description)
+- dbo.ShopItems (information about the goods of your shop – Id, SkuId, CategoryId, Name, Description)
+- dbo.Prices (price-on-date for your shop items – ShopItemId, DateTime, Price)
+- dbo.Clients (registered clients info – Id, Name, Phone, Email, Delivery Address)
+- dbo.OrderStatuses (list of order statuses – Value, Description)
+- dbo.Orders (information about created orders – Id, ClientId, OrderStatus)
+- dbo.OrderDetails (order rows information – OrderId, ShopItemId, Price, Amount, Sum)
+### Домашнее задание №7:
+1. Create console application which would be able to calculate square roots for the numbers in range from 
+M to N, where M and N – arguments what can be passed by the user. Print the pairs “number, square root” 
+in the ascending order.
+2. Create console application which would concatenate the content of all text files from the directory. 
+Directory should be passed via console application argument. All text files from that directory should be 
+copied in one one and saved in the same directory. Use asynchronous API [https://learn.microsoft.com/ru-ru/dotnet/api/system.io.filestream?view=net-6.0].
