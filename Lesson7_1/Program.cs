@@ -22,4 +22,5 @@ for (int i = m; i <= n; i++)
         numbers.Add(i);
     }
 
- _ = new Calculator<int>(numbers);
+Calculator<List<int>> calc = new(numbers);
+calc.Calculate(numbers);
