@@ -5,7 +5,7 @@
         public Water(DateTime expirationDate, string name, string description, int nomenclature, int idNumber) :
             base(expirationDate, name, description, nomenclature, idNumber)
         {
-            IdNumber = 789;
+           // IdNumber = 789;
         }
         public void PrintInfo()
         {
@@ -13,7 +13,7 @@
         }
         public override bool HasShelf()
         {
-           return true;
+            return true;
         }
         public override bool Expired(DateTime expirationDate)
         {
@@ -25,7 +25,7 @@
             }
             else
                 Console.WriteLine("Срок годности не вышел");
-                return false;
+            return false;
         }
     }
 }
