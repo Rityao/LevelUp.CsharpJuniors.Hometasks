@@ -10,7 +10,7 @@
         }
         public void PrintInfo()
         {
-            Console.WriteLine($"Название батончика: {Name} , Идентификатор продукта: {IdNumber}");
+            Console.WriteLine($"Название батончика: {Name} , Идентификатор продукта: {Id}");
         }
         public override bool HasShelf()
         {

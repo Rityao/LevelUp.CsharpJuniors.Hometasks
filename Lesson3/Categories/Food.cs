@@ -10,7 +10,7 @@ namespace Lesson3.Categories
             Name = name;
             Description = description;
             Nomenclature = nomenclature;
-            IdNumber = idNumber;
+            Id = idNumber;
         }
         public DateTime ExpirationDate { get; set; }
         public abstract bool Expired(DateTime expirationDate);

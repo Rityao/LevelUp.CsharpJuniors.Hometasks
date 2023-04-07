@@ -5,6 +5,6 @@
         public string? Name { get; set; }
         public string? Description { get; set; }
         public int Nomenclature { get; set; }
-        public int IdNumber { get; set; }
+        public int Id { get; set; }
     }
 }
